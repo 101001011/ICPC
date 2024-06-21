@@ -3,11 +3,12 @@ Author: CCA
 Contact Method: c-c-a@qq.com
 Function: 求不大于 x 的正整数中有多少个满足任意相邻两数位之差不小于 2.
 Time Complexity: O(\log x)
-Hash Value: 959e399c4c11df3d
+Hash Value: 6bb3592ecb8aa15e
 Date: 2024/6/12
 Open Source License: GPL
 */
 
+namespace DigitalDP {
 std::vector<int> a;
 std::vector<std::vector<int>> f;
 
@@ -27,4 +28,5 @@ int count (int x) {
     f.resize(a.size(), std::vector<int>(10, -1));
     if (a.size() == 1) return 0;
     return dfs(a.size() - 1, 0, true, true);
+}
 }
