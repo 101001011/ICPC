@@ -3,13 +3,14 @@ Author: CCA
 Contact Method: c-c-a@qq.com
 Function: 求 0/1 背包的最优方案数, 调用方式为 count<mod> (w, v, m), 返回方案数对 mod 取模的值.
 Time Complexity: O(nm)
-Hash Value: 23a09bcedd8a1dbe
+Hash Value: 3da1010839ee4d90
 Date: 2024/6/12
 Open Source License: GPL
 */
 
 template <unsigned int mod>
-int count (const std::vector<int> &w, const std::vector<int> &v, int m) {
+int number_of_optimal_scenarios_of_knapsack
+  (const std::vector<int> &w, const std::vector<int> &v, int m) {
     size_t n = w.size();
     std::vector<int> f(m + 1);
     std::vector<modint<mod>> cnt(m + 1);
