@@ -3,7 +3,7 @@ Author: CCA
 Contact Method: c-c-a@qq.com
 Function: 动态开点线段树框架.
 Time Complexity: O(\log n) 单次修改与查询
-Hash Value: a65bb0851f8d979e
+Hash Value: 38b80179cacf3b24
 Date: 2024/6/12
 Open Source License: GPL
 */
@@ -20,10 +20,10 @@ private:
 
     void pushdown (Node *p, int L, int R) {
         // if (p->lazy == 0) return;
-        // int mid = L + R >> 1;
-        //if (p->lc == nullptr) p->lc = new Node(L, mid);
+        int mid = L + R >> 1;
+        if (p->lc == nullptr) p->lc = new Node(L, mid);
         // 下传左子树
-        //if (p->rc == nullptr) p->rc = new Node(mid + 1, R);
+        if (p->rc == nullptr) p->rc = new Node(mid + 1, R);
         // 下传右子树
         // p->lazy = 0;
     }
