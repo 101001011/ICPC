@@ -47,7 +47,7 @@
 
 ### 势能优化
 
-- **Boder 数组**
+- **Boder 数组** √
 - 可持久化 KMP
 - Boyer-Moore 算法
 - **Z 函数**
